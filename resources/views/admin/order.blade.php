@@ -47,17 +47,18 @@
             <table class="table_deg">
 
                 <tr class="th_deg">
-                  <th>Name</th>
-                  <th>Email</th>
-                  <th>Address</th>
-                  <th>Phone</th>
-                  <th>Product title</th>
-                  <th>Quantity</th>
-                  <th>Price</th>
-                  <th>Payment Status</th>
-                  <th>Delivery Status</th>
-                  <th>Image</th>
-                  <th>Delivered</th>
+                  <th style="Padding:10px;">Name</th>
+                  <th style="Padding:10px;">Email</th>
+                  <th style="Padding:10px;">Address</th>
+                  <th style="Padding:10px;">Phone</th>
+                  <th style="Padding:10px;">Product title</th>
+                  <th style="Padding:10px;">Quantity</th>
+                  <th style="Padding:10px;">Price</th>
+                  <th style="Padding:10px;">Payment Status</th>
+                  <th style="Padding:10px;">Delivery Status</th>
+                  <th style="Padding:10px;">Image</th>
+                  <th style="Padding:10px;">Delivered</th>
+                  <th style="Padding:10px;">Print PDF</th>
 
                 </tr>
 
@@ -86,6 +87,9 @@
                     @endif
 
                   </td>
+                    <td>
+                        <a href="{{url('print_pdf',$order->id)}}"class="btn btn-secondary">Print PDF</a>
+                    </td>
 
                 </tr>
 

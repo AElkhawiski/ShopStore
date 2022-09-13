@@ -20,6 +20,7 @@
     <link href="home/css/style.css" rel="stylesheet" />
     <!-- responsive style -->
     <link href="home/css/responsive.css" rel="stylesheet" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.1/jquery.min.js" integrity="sha512-aVKKRRi/Q/YV+4mjoKBsE4x3H+BkegoM/em46NNlCqNTmUYADjBbeNefNxYV7giUp0VxICtqdrbqU7iVaeZNXA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 </head>
 <body>
 <div class="hero_area">
@@ -29,6 +30,49 @@
 @include('home.why')
 @include('home.new_arival')
 @include('home.product')
+
+<div style="text-align: center;padding-bottom: 30px;">
+    <h1 style="font-size:30px;text-align: center; padding-top: 20px;padding-bottom: 20px;">Comments</h1>
+    <form action="{{url('add_comment')}}" method="post">
+        @csrf
+        <textarea style="height:150px;width:600px" placeholder="Comment Something here" name="comment"></textarea>
+        <br>
+    <input type="submit" value="Comment" class="btn btn-primary">
+    </form>
+</div>
+<div style="padding-left: 20%;">
+    <h1 style="font-size: 20px;padding-bottom: 20px">All Comments</h1>
+    @foreach($comment as $comment)
+    <div>
+        <b>{{$comment->name}}</b>
+        <p>{{$comment->comment}}</p>
+        <a class="btn  btn-primary" href="javascript:void(0);" onclick="reply(this)" data-Commentid="{{$comment->id}}">Replay</a>
+        @foreach($reply as $rep)
+
+        <div style="padding-left: 3%;padding-bottom: 10px;padding-bottom: 10px;">
+            <b>{{$rep->name}}</b>
+            <p>{{$rep->reply}}</p>
+            <a class="btn  btn-primary" href="javascript:void(0);" onclick="reply(this)" data-Commentid="{{$comment->id}}">Replay</a>
+        </div>
+
+            @endforeach
+    </div>
+@endforeach
+
+    <br>
+    <form action="{{url('add_reply')}}"method="POST">
+        @csrf
+    <div style="display: none;"class="replyDiv">
+        <input type="text" id="commentId" name="commentId" hidden="">
+        <textarea placeholder="Write Something..." style="height:100px;width:500px" name="reply"></textarea>
+        <br>
+        <button type="submit" class="btn btn-outline-danger">Reply</button>
+        <a href="avascript:void(0);" class="btn btn-primary" onclick="reply_close(this)">Close</a>
+    </div>
+
+</form>
+    </div>
+
 @include('home.subscrib')
 @include('home.client')
 @include('home.footer')
@@ -37,9 +81,31 @@
     <p class="mx-auto">© 2021 All Rights Reserved By <a href="https://html.design/">Free Html Templates</a><br>
 
         Distributed By <a href="https://themewagon.com/" target="_blank">ThemeWagon</a>
-
     </p>
 </div>
+<script type="text/javascript">
+    function reply(caller)
+    {
+        document.getElementById('commentId').value=$(caller).attr('data-Commentid');
+        $('replyDiv').insertAfter($(caller));
+        $(".replyDiv").show();
+    }
+    function reply_close(caller)
+    {
+
+        $(".replyDiv").hide();
+    }
+</script>
+<script>
+    document.addEventListener("DOMContentLoaded", function(event) {
+        var scrollpos = localStorage.getItem('scrollpos');
+        if (scrollpos) window.scrollTo(0, scrollpos);
+    });
+
+    window.onbeforeunload = function(e) {
+        localStorage.setItem('scrollpos', window.scrollY);
+    };
+</script>
 <!-- jQery -->
 <script src="home/js/jquery-3.4.1.min.js"></script>
 <!-- popper js -->

@@ -57,8 +57,8 @@
                 <th class="th_deg">Product title</th>
                 <th class="th_deg">Description</th>
                 <th class="th_deg">Quantity</th>
-                <th class="th_deg">Catagory</th>
-                <th class="th_deg">Price</th>                                                          
+                <th class="th_deg">Category</th>
+                <th class="th_deg">Price</th>
                 <th class="th_deg">Discount Price</th>
                 <th class="th_deg">Product image</th>
                 <th class="th_deg">Delete</th>
@@ -71,7 +71,7 @@
                 <td>{{$product->title}}</td>
                 <td>{{$product->description}}</td>
                 <td>{{$product->quantity}}</td>
-                <td>{{$product->catagory}}</td>
+                <td>{{$product->category}}</td>
                 <td>{{$product->price}}</td>
                 <td>{{$product->discount_price}}</td>
                 <td>
@@ -81,7 +81,7 @@
                 <td><a class="btn btn-danger" onclick="return confirm('Are you sure that you want to delete this')" href="{{url('delete_product',$product->id)}}">Delete</a></td>
                 <td><a class="btn btn-success" href="{{url('update_product',$product->id)}}">Edit</a></td>
             </tr>
-            @endforeach 
+            @endforeach
         </table>
 </div>
 </div>
