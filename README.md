@@ -5,6 +5,10 @@
 ![FireShot Capture 004 - Kids Shop - 127 0 0 1](https://user-images.githubusercontent.com/100705079/190267102-bf2bbc36-f8f4-4d0c-b649-7f4e99034aa4.png)
 #Admin Interface
 ![FireShot Capture 007 - Kids Shop - 127 0 0 1](https://user-images.githubusercontent.com/100705079/190267443-534322f7-7cd2-4b0e-9e2b-28026f3ecab0.png)
+![37e31dd8-68ea-40ad-8037-6d390c234990](https://user-images.githubusercontent.com/100705079/190270614-a56c5ca2-1986-49bc-b909-276c88810249.png)
+![05ed35e3-fcab-40a5-9663-a27842399fd1](https://user-images.githubusercontent.com/100705079/190270636-ceaa63c8-89fa-4e85-bbc6-022c998efe89.png)
+![313723a9-c7c2-4bc7-9389-52e69e18389b](https://user-images.githubusercontent.com/100705079/190270674-71f44271-79d6-421e-9c59-638322873791.png)
+![993c8d04-f922-433d-af4b-619d38ba2828](https://user-images.githubusercontent.com/100705079/190270681-43b90ca2-8006-4a75-9dbb-25dd7b26d43f.png)
 
 <p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400" alt="Laravel Logo"></a></p>
 
