@@ -1,4 +1,7 @@
 ![FireShot Capture 001 - Kids Shop - 127 0 0 1](https://user-images.githubusercontent.com/100705079/190266479-d4d7d985-11a8-4623-b670-48ec03438810.png)
+![FireShot Capture 002 - Kids Shop - 127 0 0 1](https://user-images.githubusercontent.com/100705079/190267060-c57afde7-5949-4c37-ac52-13fe9e22f4c9.png)
+![FireShot Capture 003 - Kids Shop - 127 0 0 1](https://user-images.githubusercontent.com/100705079/190267077-a9ce569b-1a98-41ae-b759-39c94565d6f0.png)
+![FireShot Capture 004 - Kids Shop - 127 0 0 1](https://user-images.githubusercontent.com/100705079/190267102-bf2bbc36-f8f4-4d0c-b649-7f4e99034aa4.png)
 
 <p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400" alt="Laravel Logo"></a></p>
 
