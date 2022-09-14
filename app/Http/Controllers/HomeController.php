@@ -17,7 +17,7 @@ class HomeController extends Controller
 {
     public function index()
     {
-        $product=Product::paginate(3);
+        $product=Product::paginate(15);
         $comment=comment::all();
         return view('home.userpage',compact('product','comment'));
     }
@@ -41,7 +41,7 @@ class HomeController extends Controller
         }
         else
         {
-            $product=Product::paginate(3);
+            $product=Product::paginate(15);
             $comment=comment::all();
             return view('home.userpage',compact('product','comment'));
         }
@@ -301,7 +301,7 @@ class HomeController extends Controller
         $comment=comment::all();
 
         $search_text=$request->search;
-        $product=product::where('title','LIKE',"%$search_text%")->orwhere('category','LIKE',"$search_text")->paginate(10);
+        $product=product::where('title','LIKE',"%$search_text%")->orwhere('category','LIKE',"$search_text")->paginate(15);
         return view('home.userpage',compact('product','comment'));
 
     }
@@ -314,7 +314,7 @@ class HomeController extends Controller
         $comment=comment::all();
 
         $search_text=$request->search;
-        $product=product::where('title','LIKE',"%$search_text%")->orwhere('category','LIKE',"$search_text")->paginate(10);
+        $product=product::where('title','LIKE',"%$search_text%")->orwhere('category','LIKE',"$search_text")->paginate(15);
         return view('home.all_product',compact('product','comment'));
 
     }
