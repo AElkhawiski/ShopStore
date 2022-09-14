@@ -25,35 +25,7 @@
 <body>
 <div class="hero_area">
     @include('home.header')
-    @include('home.slider')
-</div>
-@include('home.why')
-@include('home.new_arival')
-@include('home.product')
-
-<div style="text-align: center;padding-bottom: 30px;">
-    <h1 style="font-size:30px;text-align: center; padding-top: 20px;padding-bottom: 20px;">Comments</h1>
-    <form action="{{url('add_comment')}}" method="post">
-        @csrf
-        <textarea style="height:150px;width:600px" placeholder="Comment Something here" name="comment"></textarea>
-        <br>
-    <input type="submit" value="Comment" class="btn btn-primary">
-    </form>
-</div>
-<div style="padding-left: 20%;">
-    <h1 style="font-size: 20px;padding-bottom: 20px">All Comments</h1>
-    @foreach($comment as $comment)
-    <div>
-        <b>{{$comment->name}}</b>
-        <p>{{$comment->comment}}</p>
-
-    </div>
-@endforeach
-
-</form>
-    </div>
-
-@include('home.footer')
+@include('home.product_view')
 
 <div class="cpy_">
     <p class="mx-auto">© 2021 All Rights Reserved By <a href="https://html.design/">Free Html Templates</a><br>
